@@ -178,7 +178,7 @@ export default {
     addMarker(pharmacy, isOpenPopUp = false) {
       const [lng, lat] = pharmacy.geometry.coordinates;
       const { mask_adult: maskAdultCount, mask_child: maskChildCount } = pharmacy.properties;
-      const icon = maskAdultCount || maskChildCount ? markerIcons.blue : markerIcons.grey;
+      const icon = maskAdultCount || maskChildCount ? markerIcons.green : markerIcons.grey;
       this.openStreetMap.addMarker(lat, lng, icon, createPopUp(pharmacy), isOpenPopUp);
     },
     resetMarkers() {
@@ -204,14 +204,14 @@ export default {
       this.sideBarCollapse();
     },
     sideBarCollapse() {
-      // console.log('clicked');
-      // console.log(this.isCollapse);
       if (this.isCollapse === false) {
         this.isCollapse = true;
       } else if (this.isCollapse === true) {
         this.isCollapse = false;
       }
     },
+  },
+  components: {
   },
   computed: {
     filterPharmacies() {

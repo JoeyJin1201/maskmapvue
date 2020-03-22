@@ -8,14 +8,14 @@ const markerIconsConfig = {
 };
 
 export const markerIcons = {
-  blue: new L.Icon({
+  green: new L.Icon({
     iconUrl:
       'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
     ...markerIconsConfig,
   }),
   grey: new L.Icon({
     iconUrl:
-      'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-grey.png',
+      'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-grey.png',
     ...markerIconsConfig,
   }),
 };
@@ -30,10 +30,11 @@ export default class OpenStreetMap {
   init(domId, lat, lng) {
     this.map = L.map(domId, {
       center: [lat, lng],
-      zoom: 15,
+      zoom: 17,
     });
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', { foo: 'bar' }).addTo(
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}',
+      { attribution: '作者 Joey | 設計師 Wendy ', foo: 'bar' }).addTo(
       this.map,
     );
   }
