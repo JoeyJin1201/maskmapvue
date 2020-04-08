@@ -142,6 +142,7 @@ const createPopUp = (pharmacy) => (`
       <div class="pharmacy-mask-title">兒童口罩</div>
       <div class="pharmacy-mask-count">${pharmacy.properties.mask_child}</div>
     </div>
+    <div class="pharmacy-note" title="pharmacy-mask">備註：${pharmacy.properties.note}</div>
   </div>
   <p id="lastUpdate">最後更新時間：${pharmacy.properties.updated}</p>
 `);

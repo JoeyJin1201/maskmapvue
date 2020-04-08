@@ -168,7 +168,8 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.pharmacy-mask {
+.pharmacy-mask,
+.pharmacy-note {
 	width: 100%;
   display: flex;
 	justify-content: space-between;
@@ -181,6 +182,12 @@ body {
   &:not(:last-child) {
     margin-bottom: 5px;
   }
+}
+
+.pharmacy-note {
+  background-color: rgba($color: #000000, $alpha: 0.2);
+  justify-content: center;
+  font-size: 0.5rem;
 }
 
 .adultMaskInStock {
